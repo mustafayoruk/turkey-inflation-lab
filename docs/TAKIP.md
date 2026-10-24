@@ -1,6 +1,6 @@
 # İlerleme ve kabul
 
-25 Ekim 2026 — veri, baseline ve Ridge geliştirme değerlendirmesi tamamlandı; GitHub yayın paketi hazırlandı.
+25 Ekim 2026 — veri, baseline ve Ridge geliştirme değerlendirmesi tamamlandı; GitHub araştırma paketi yayımlandı.
 
 | İş | Durum | Kabul kanıtı |
 |---|---|---|
@@ -22,6 +22,8 @@
 | Veri yeniden dağıtım koşulları | Atıflı araştırma kapsamında doğrulandı | DATA-NOTICE.md; TCMB ticari kullanım için yazılı izin istiyor |
 | CSV araştırma paketi | Hazır | data/published/research-v1; 261 gözlem, 432 tahmin, 12 ölçüm, 540 tuning kaydı; SHA-256 listesi |
 | Lisans | Hazır | Orijinal kod/belgeler MIT; üçüncü taraf veri ayrı koşullarda |
+| GitHub yayını | Doğrulandı | mustafayoruk/turkey-inflation-lab public; araştırma commit'i 636e27c69657ab6c379daa8b5b97476102ec6df2; lisanslar ve tüm paket dosyaları API'den geri okunup eşleşti |
+| Paket tekrar üretimi | Başarılı | Yayımlanan snapshot ile yeniden çalıştırılan tahmin CSV'si byte düzeyinde aynı; tüm paket SHA-256 değerleri doğrulandı |
 
 ## İş açısından sonuç
 2015–2023 genel MAE: son 12 ay ortalaması 1,1692; son ay 1,2427; geçen yıl aynı ay 1,5235 yüzde puan.
