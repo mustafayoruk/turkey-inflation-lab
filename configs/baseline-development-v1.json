@@ -1,0 +1,44 @@
+{
+  "protocol_id": "baseline-development-v1",
+  "declared_on": "2026-10-25",
+  "question": "Forecast the next published monthly headline CPI percentage change after the previous release.",
+  "target": "monthly_pct",
+  "unit": "percentage_points",
+  "evaluation_mode": "latest-vintage-pseudo-out-of-sample",
+  "expected_csv_sha256": "0688ce380383cbf1d671a9951114809a9ebfa1c296536e96491ff0fe475cc8b1",
+  "initial_training_start": "2005-01",
+  "initial_training_end": "2014-12",
+  "development_start": "2015-01",
+  "development_end": "2023-12",
+  "final_holdout_start": "2024-01",
+  "final_holdout_end": "2026-09",
+  "primary_metric": "MAE",
+  "secondary_metrics": [
+    "RMSE",
+    "bias"
+  ],
+  "methods": [
+    "naive",
+    "seasonal_naive",
+    "trailing_mean_12"
+  ],
+  "subperiods": [
+    {
+      "name": "2015-2019",
+      "start": "2015-01",
+      "end": "2019-12"
+    },
+    {
+      "name": "2020-2023",
+      "start": "2020-01",
+      "end": "2023-12"
+    }
+  ],
+  "information_assumption": "For each target month, the previous month's headline CPI and earlier monthly observations are assumed known; historical exact release timestamps and vintages are not verified.",
+  "selection_rule": "Lowest development MAE is a provisional reference only. No superiority or significance claim; final holdout is not scored in this slice.",
+  "compute_budget": {
+    "methods": 3,
+    "workers": 1,
+    "hyperparameter_searches": 0
+  }
+}

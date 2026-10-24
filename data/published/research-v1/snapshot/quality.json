@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "observations": 261,
+  "first_period": "2005-01",
+  "last_period": "2026-09",
+  "duplicate_periods": 0,
+  "missing_months": 0,
+  "negative_monthly_rates": 27,
+  "release_timestamps_verified": false,
+  "historical_vintages_available": false,
+  "limitations": [
+    "Snapshot of current table, not a historical point-in-time dataset.",
+    "Header/base-year and HTML summary discrepancy requires metadata review.",
+    "Public redistribution terms have not been verified."
+  ]
+}

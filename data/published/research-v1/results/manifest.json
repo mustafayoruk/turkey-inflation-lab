@@ -1,0 +1,19 @@
+{
+  "protocol_id": "ridge-development-v1",
+  "protocol_sha256": "3ef4252494150e5fbe2fc8980a1a92ed4f6f628f5bdcbb94f908ac79383b44ac",
+  "source_csv_sha256": "0688ce380383cbf1d671a9951114809a9ebfa1c296536e96491ff0fe475cc8b1",
+  "code_sha256": {
+    "evaluate_ridge.py": "5a46d7784c58a766f7f2a8fc73fe465ef9c1ccdc8b7e1f7cd5085b1cd7595a64",
+    "evaluate_baselines.py": "b48a548a8ebfff1c1c89cbaca379853ad7e9c2b85add4cb2ab814d6cfe1b4197",
+    "prepare_cpi.py": "ab29422b5061f6aeaaaa00687be9b49ab0e8a9e39f98ea507e1ac7919400490e"
+  },
+  "python_version": "3.12.14",
+  "sklearn_version": "1.7.2",
+  "numpy_version": "2.5.4",
+  "created_at": "2026-10-24T22:03:26.313497+00:00",
+  "evaluation_mode": "latest-vintage-pseudo-out-of-sample",
+  "holdout_scored": false,
+  "fit_count": 1728,
+  "workers": 1,
+  "elapsed_compute_seconds": 2.8215063999959966
+}

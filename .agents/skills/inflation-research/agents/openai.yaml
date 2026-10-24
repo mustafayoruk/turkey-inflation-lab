@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inflation Research"
+  short_description: "Evidence-based inflation research and evaluation"
+  default_prompt: "Use $inflation-research to evaluate the next forecasting task and report its business value, evidence, and limitations."

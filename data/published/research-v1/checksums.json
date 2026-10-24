@@ -1,0 +1,11 @@
+{
+  "snapshot/cpi.csv": "0688ce380383cbf1d671a9951114809a9ebfa1c296536e96491ff0fe475cc8b1",
+  "snapshot/manifest.json": "91d1e43582cabe3643bafc38f082c620055e266e0aee84a963a203082c0fd624",
+  "snapshot/quality.json": "0b2c7388b62ceac14c70d2ce8070ad6f68877d3c835139e459e8e7b36f73395a",
+  "snapshot/source.html": "798fc48c4ae1bfc0b826e21d815b517ef71ffce36619d704f5e7c025bbb85fb8",
+  "results/predictions.csv": "0b4716975dfcad5fd77a19d6d52aa48f1d0dcfae0bba81e7dfec9197bb1f24ad",
+  "results/metrics.csv": "07644ff50d12f09c3df6b0a80a6bc64609ad918f3dda3d2a4ce9910523d1121c",
+  "results/tuning.csv": "ac9cf4a18dcf53f038b30992ad2b379c9d4130fbb03a04ab4892a61295c4ca5e",
+  "results/protocol.json": "3ef4252494150e5fbe2fc8980a1a92ed4f6f628f5bdcbb94f908ac79383b44ac",
+  "results/manifest.json": "6410f07c9835b76cf9e1ea9103b38f7d92af72b5c7f6d9e42ca95dfac3450d10"
+}

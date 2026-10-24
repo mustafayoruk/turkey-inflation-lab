@@ -1,0 +1,4 @@
+* text=auto
+*.csv -text
+*.html -text
+*.json -text

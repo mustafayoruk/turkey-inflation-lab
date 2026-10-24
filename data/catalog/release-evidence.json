@@ -1,0 +1,20 @@
+{
+  "checked_on": "2026-10-25",
+  "headline_example": {
+    "reference_period": "2026-09",
+    "published_local": "2026-10-05 10:00",
+    "timezone_interpretation": "Europe/Istanbul; displayed local time interpreted as Turkey time",
+    "source_url": "https://veriportali.tuik.gov.tr/tr/press/58298",
+    "next_release_date_announced": "2026-11-03",
+    "evidence": "Official bulletin rendered in browser; displayed publication header and next-bulletin statement inspected"
+  },
+  "seasonally_adjusted": {
+    "source_date": "2024-10-02",
+    "source_url": "https://www.tuik.gov.tr/media/announcements/Tufe_Mevsimsel_Tablo_TR.pdf",
+    "rule": "Announcement states one business day after headline release at 16:00",
+    "status": "Documentary rule; historical per-release timestamps not reconstructed"
+  },
+  "historical_calendar_complete": false,
+  "historical_vintages_available": false,
+  "metadata_caveat": "Rendered September 2026 bulletin uses 2025=100 while its metadata tab still contains 2003=100/2025 coverage text; do not assume metadata tab is fully synchronized."
+}

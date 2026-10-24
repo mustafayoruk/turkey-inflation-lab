@@ -1,0 +1,13 @@
+{
+  "source_url": "https://tcmb.gov.tr/wps/wcm/connect/TR/TCMB%2BTR/Main%2BMenu/Istatistikler/Enflasyon%2BVerileri",
+  "source_sha256": "798fc48c4ae1bfc0b826e21d815b517ef71ffce36619d704f5e7c025bbb85fb8",
+  "retrieved_at": "2026-10-24T21:27:45+00:00",
+  "processed_at": "2026-10-24T21:35:11.395044+00:00",
+  "parser_version": "1",
+  "python_version": "3.12.14",
+  "vintage_status": "latest-vintage-only",
+  "released_at": null,
+  "target": "monthly_pct",
+  "unit": "percent change; forecast errors will be percentage points",
+  "cpi_sha256": "0688ce380383cbf1d671a9951114809a9ebfa1c296536e96491ff0fe475cc8b1"
+}
