@@ -40,7 +40,7 @@ def build():
 
 **Karar:** Geçmiş aylık TÜFE, bir sonraki açıklanacak aylık değişimi basit referanslardan daha iyi tahmin edebiliyor mu?
 
-Bu dosya veri snapshot'ını, kaynak HTML'ini, deney protokolünü, hesaplama kodunu ve referans sonuçları içerir. Repo klonlama, Drive bağlama veya ayrıca CSV yükleme gerekmez. Colab'da **Runtime → Run all** ile sırayla çalıştırın; CPU yeterlidir. İlk hücre eksik/sürümü farklı paketleri kurabilir, bunun için internet gerekir. Python 3.12.14 ile yerelde doğrulandı; Colab hizmetinde canlı çalıştırma ayrıca doğrulanmalıdır.
+Bu dosya veri snapshot'ını, kaynak HTML'ini, deney protokolünü, hesaplama kodunu ve referans sonuçları içerir. Repo klonlama, Drive bağlama veya ayrıca CSV yükleme gerekmez. Colab'da **Runtime → Run all** ile sırayla çalıştırın; CPU yeterlidir. İlk hücre eksik/sürümü farklı paketleri kurabilir, bunun için internet gerekir. Python 3.12.14 ile yerelde; 25 Ekim 2026 tarihinde Colab CPU/Python 3.13.16 üzerinde paket kurulumu → oturumu yeniden başlat → Run all akışıyla doğrulandı. Kaydedilmiş çıktılar yerel çalıştırmadan gelir.
 
 **Hedef:** sonraki aylık TÜFE değişimi (%); hata birimi yüzde puan. İlk tarihçe 2005–2014, geliştirme 2015–2023 (108 ay). **2024-01–2026-09 nihai dönem skorlanmaz.** Güncel veri sürümüyle pseudo-out-of-sample değerlendirmesidir; tarihsel yayım/vintage bilgisi eksiktir. Önceki ayın verisinin bilindiği varsayılır.
 
@@ -145,10 +145,12 @@ write_csv(result_dir/'tuning.csv',tuning)
 (result_dir/'protocol.json').write_text(json.dumps(protocol,indent=2),encoding='utf-8')
 run_manifest={'holdout_scored':False,'evaluation_mode':protocol['evaluation_mode'],
               'source_csv_sha256':source_manifest['cpi_sha256'],
+              'source_url':source_manifest['source_url'],'retrieved_at':source_manifest['retrieved_at'],
               'python_version':platform.python_version(),
               'dependencies':{p.split('==')[0]:importlib.metadata.version(p.split('==')[0]) for p in PINS},
               'generated_code_sha256':NOTEBOOK_CODE_SHA256}
 (result_dir/'manifest.json').write_text(json.dumps(run_manifest,indent=2),encoding='utf-8')
+(result_dir/'DATA-NOTICE.md').write_text(DATA_NOTICE,encoding='utf-8')
 archive=shutil.make_archive(str(result_dir),'zip',result_dir)
 print('CSV/manifest ZIP:',Path(archive).relative_to(Path.cwd()))''')
     cell('markdown', (ROOT/'DATA-NOTICE.md').read_text(encoding='utf-8')+'\n\n## Kod lisansı ve yöntem kaynakları\nOrijinal kod/belgeler MIT; yukarıdaki üçüncü taraf veri kapsamı ayrıdır.\n\n'+(ROOT/'LICENSE').read_text(encoding='utf-8')+'''
@@ -161,6 +163,7 @@ Yöntem dayanağı: [Forecast evaluation (2023)](https://doi.org/10.1007/s10618-
     # Preserve the exact selected code used by the generated cells for run provenance.
     codes={name:hashlib.sha256(code_from(name).encode()).hexdigest() for name in FUNCTIONS}
     cells[1]['source']+='\nNOTEBOOK_CODE_SHA256 = '+repr(codes)+'\n'
+    cells[1]['source']+='\nDATA_NOTICE = '+repr((ROOT/'DATA-NOTICE.md').read_text(encoding='utf-8'))+'\n'
     return {'cells':cells,'metadata':{'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},
              'language_info':{'name':'python','version':'3.12.14'},
              'colab':{'name':TARGET.name,'provenance':[]},

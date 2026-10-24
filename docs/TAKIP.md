@@ -50,4 +50,5 @@ Kur, üretici fiyatları ve beklenti gibi az sayıda ekonomik aday için yayım 
 - scripts/build_notebook.py kodu mevcut üç kaynaktan üretir; hesaplama fonksiyonlarının AST eşitliği ve gömülü girdilerin byte kimliği test edilir. El ile iki ayrı model uygulaması tutulmaz.
 - Yerel kanıt: nbformat 5.10.4 şema doğrulaması; temiz namespace içinde sırayla 9 kod hücresi çalıştı; 432 tahmin 1e-10 toleransta referansla eşleşti. Nihai dönem skorlanmadı.
 - README'ye Colab düğmesi, tek dosya indirme/yükleme ve tekrar üretme komutları eklendi. Kaydedilmiş notebook çıktıları yerel çalıştırmadan gelir.
-- Açık kabul: Google Colab sunucusunda oturum/bağımlılık kurulumu/Run all ve ZIP indirme. Yerel hücre çalıştırması Jupyter kernel veya bulut kabulü diye sunulmadı.
+- Colab kanıtı: 25 Ekim 2026; CPU, Python 3.13.16, aynı sabit bağımlılıklar. Kurulum sonrası oturum yeniden başlatıldı; Run all tamamlandı. Canlı hücre çıktısında 432 tahminin referans eşitliği ve work/colab-runs altında ZIP üretimi görüldü. Yerel ve bulut kanıtları ayrıdır. Dosyanın kullanıcının cihazına indirilmesi ayrıca denenmedi.
+- ZIP çıktısı kaynak URL/indirme zamanı ve DATA-NOTICE.md taşır. Notebook GitHub’dan açıldı; kullanıcı hesabı bilgileri ve oturum verileri repoya kaydedilmedi.
