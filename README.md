@@ -69,3 +69,8 @@ Next: identify publication-aware economic inputs, declare the next experiment be
 ## License and attribution
 
 Original code and documentation: [MIT License](LICENSE). Third-party CPI observations, source HTML and their reproduction in outputs are excluded from that grant: see [data terms](data/LICENSE.md) and [DATA-NOTICE.md](DATA-NOTICE.md). Source: TÜİK, reproduced by TCMB; retrieved 24 October 2026. TCMB requires written permission for commercial use. This repository is a noncommercial research portfolio and is not affiliated with either agency.
+
+---
+
+**Author:** [Mustafa YÖRÜK](https://github.com/mustafayoruk)  
+*Statistics Student @ Hacettepe University*
