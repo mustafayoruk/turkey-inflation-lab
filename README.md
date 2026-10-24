@@ -1,5 +1,7 @@
 # Turkey Inflation Lab
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mustafayoruk/turkey-inflation-lab/blob/main/notebooks/turkey_inflation_lab.ipynb)
+
 Reproducible Turkish CPI forecasting research for economic analysis and decision support.
 
 **Current finding:** a small Ridge model slightly improves development MAE over the trailing average, but performs worse than last-month persistence during 2020–2023. Model complexity alone does not resolve inflation shocks.
@@ -30,6 +32,24 @@ Ridge reduces overall MAE by 2.5% versus the trailing mean, but has more negativ
 - [CSV dictionary](docs/CSV-SOZLUGU.md), [file checksums](data/published/research-v1/checksums.json), [run environment and code hashes](data/published/research-v1/results/manifest.json).
 - [Ridge experiment design](docs/DENEY-002.md), [baseline design](docs/DENEY-001.md), [research source register](.agents/skills/inflation-research/references/sources.md).
 
+## Run as a single notebook in Google Colab
+
+Open the badge above, then choose **Runtime → Run all** on a CPU runtime. Or download [turkey_inflation_lab.ipynb](notebooks/turkey_inflation_lab.ipynb) and upload that single file to Colab/Jupyter.
+
+The notebook embeds the frozen source snapshot, CSV data, declared protocol, analysis code and reference outputs. No repository clone, separate CSV upload, Drive mount or GitHub token is needed. Package installation may require internet and a session restart; Python 3.12.14 was used locally. This is the saved research snapshot, not an automatically refreshed data feed. Its input data retains the agency terms in DATA-NOTICE.md; it is not all covered by MIT.
+
+It covers source validation, all four methods, period metrics, economic interpretation and CSV/ZIP export. The nine code cells were executed sequentially in a fresh local Python namespace, all 432 predictions matched the published study within 1e-10 tolerance, and the notebook passed nbformat 5.10.4 validation. Saved outputs are from that local run. A hosted Colab runtime has **not** yet been accepted; opening a Colab link is not evidence of cloud execution.
+
+The notebook is generated from the canonical scripts to prevent method drift. To regenerate and verify it locally:
+
+```bash
+python -m pip install -r requirements-dev.txt
+python scripts/build_notebook.py
+python scripts/verify_notebook.py --input notebooks/turkey_inflation_lab.ipynb --output notebooks/turkey_inflation_lab.ipynb
+```
+
+See [Google's Colab guide](https://research.google.com/colaboratory/intl/en-GB/faq.html) for uploading notebooks and runtime behavior.
+
 ## Reproduce
 
 Python 3.12.14 was used. Parsing uses only the standard library; modelling uses scikit-learn 1.7.2. Dependencies are pinned in requirements.txt. Use a fresh output directory for each run.
@@ -58,7 +78,7 @@ The model uses 12 lagged monthly rates, a training-only StandardScaler/Ridge pip
 
 This is **latest-vintage pseudo-out-of-sample** evaluation. Exact historical release times and first-release vintages have not been reconstructed. Previous-month availability is an explicit assumption. The complete source CSV includes the holdout, but no current scores or model selection use that period; there is no cryptographic blinding. Source base-year labels are inconsistent across page metadata; incompatible index levels are not spliced.
 
-Local verification: 25 unit tests passed, plus the real 108-origin experiment (1,728 Ridge fits, one worker). No cloud CI, dashboard, API, forecast interval, live forecast or commercial acceptance is claimed.
+Local verification: 27 unit tests passed, plus the real 108-origin experiment (1,728 Ridge fits, one worker). No cloud CI, dashboard, API, forecast interval, live forecast or commercial acceptance is claimed.
 
 ## Roadmap and product direction
 

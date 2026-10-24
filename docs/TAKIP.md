@@ -16,7 +16,7 @@
 | Deney protokolü | Sonuçlar hesaplanmadan yazıldı | configs/baseline-development-v1.json; SHA e518453d...953b57c |
 | İlk baseline karşılaştırması | Başarılı, geliştirme kanıtı | 108 ay × 3 yöntem = 324 tahmin; koşu reports/runs/baseline-development-v1 |
 | Nihai dönem | Ayrıldı, skorlanmadı | 2024-01–2026-09; 33 ay; holdout_scored=false |
-| Kod kontrolleri | Başarılı | unittest 25/25; veri, baseline, Ridge ve dışa aktarma kontrolleri |
+| Kod kontrolleri | Başarılı | unittest 27/27; veri, baseline, Ridge ve dışa aktarma kontrolleri |
 | Ridge | Geliştirme tamamlandı | 108 origin, 1.728 fit; genel MAE 1,1397; DENEY-002.md |
 | Dashboard/API/CI/gerçek kurum kabulü | Başlanmadı | Yerel araştırma kanıtı, yayın kabulü değil |
 | Veri yeniden dağıtım koşulları | Atıflı araştırma kapsamında doğrulandı | DATA-NOTICE.md; TCMB ticari kullanım için yazılı izin istiyor |
@@ -43,3 +43,11 @@ Ridge genel MAE'de 12 aylık ortalamaya göre yaklaşık %2,5 daha düşük hata
 
 ## Sıradaki kabul
 Kur, üretici fiyatları ve beklenti gibi az sayıda ekonomik aday için yayım takvimi, veri sürümü ve kullanım koşulları sözleşmesi. Sonraki deney sonuç görülmeden sabitlenecek; final holdout model tasarımı dondurulmadan açılmayacak. Analistin kullanabileceği rapor biçimi ayrı kullanıcı kabulü gerektirir.
+
+
+## Tek dosyalık notebook — 25 Ekim 2026
+- notebooks/turkey_inflation_lab.ipynb: gömülü kaynak snapshot/CSV/protokol, görünür hesaplama fonksiyonları, dört yöntem karşılaştırması, referans eşitliği ve ZIP dışa aktarımı.
+- scripts/build_notebook.py kodu mevcut üç kaynaktan üretir; hesaplama fonksiyonlarının AST eşitliği ve gömülü girdilerin byte kimliği test edilir. El ile iki ayrı model uygulaması tutulmaz.
+- Yerel kanıt: nbformat 5.10.4 şema doğrulaması; temiz namespace içinde sırayla 9 kod hücresi çalıştı; 432 tahmin 1e-10 toleransta referansla eşleşti. Nihai dönem skorlanmadı.
+- README'ye Colab düğmesi, tek dosya indirme/yükleme ve tekrar üretme komutları eklendi. Kaydedilmiş notebook çıktıları yerel çalıştırmadan gelir.
+- Açık kabul: Google Colab sunucusunda oturum/bağımlılık kurulumu/Run all ve ZIP indirme. Yerel hücre çalıştırması Jupyter kernel veya bulut kabulü diye sunulmadı.
