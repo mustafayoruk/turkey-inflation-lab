@@ -16,7 +16,7 @@
 | Deney protokolü | Sonuçlar hesaplanmadan yazıldı | configs/baseline-development-v1.json; SHA e518453d...953b57c |
 | İlk baseline karşılaştırması | Başarılı, geliştirme kanıtı | 108 ay × 3 yöntem = 324 tahmin; koşu reports/runs/baseline-development-v1 |
 | Nihai dönem | Ayrıldı, skorlanmadı | 2024-01–2026-09; 33 ay; holdout_scored=false |
-| Kod kontrolleri | Başarılı | unittest 27/27; veri, baseline, Ridge ve dışa aktarma kontrolleri |
+| Kod kontrolleri | Başarılı | unittest 29/29; veri, baseline, Ridge ve dışa aktarma kontrolleri |
 | Ridge | Geliştirme tamamlandı | 108 origin, 1.728 fit; genel MAE 1,1397; DENEY-002.md |
 | Dashboard/API/CI/gerçek kurum kabulü | Başlanmadı | Yerel araştırma kanıtı, yayın kabulü değil |
 | Veri yeniden dağıtım koşulları | Atıflı araştırma kapsamında doğrulandı | DATA-NOTICE.md; TCMB ticari kullanım için yazılı izin istiyor |
@@ -52,3 +52,12 @@ Kur, üretici fiyatları ve beklenti gibi az sayıda ekonomik aday için yayım 
 - README'ye Colab düğmesi, tek dosya indirme/yükleme ve tekrar üretme komutları eklendi. Kaydedilmiş notebook çıktıları yerel çalıştırmadan gelir.
 - Colab kanıtı: 25 Ekim 2026; CPU, Python 3.13.16, aynı sabit bağımlılıklar. Kurulum sonrası oturum yeniden başlatıldı; Run all tamamlandı. Canlı hücre çıktısında 432 tahminin referans eşitliği ve work/colab-runs altında ZIP üretimi görüldü. Yerel ve bulut kanıtları ayrıdır. Dosyanın kullanıcının cihazına indirilmesi ayrıca denenmedi.
 - ZIP çıktısı kaynak URL/indirme zamanı ve DATA-NOTICE.md taşır. Notebook GitHub’dan açıldı; kullanıcı hesabı bilgileri ve oturum verileri repoya kaydedilmedi.
+
+
+## Portfolyo sunumu ve hata analizi — 25 Ekim 2026
+- README problem, iki grafik, temel bulgu, Colab ve veri bağlantıları etrafında kısaltıldı; uzun çalıştırma/ortam bilgisi REPRODUCIBILITY.md içine taşındı.
+- RESEARCH-NOTE.md sonuç sonrası betimsel inceleme içerir: en büyük üç Ridge hatası toplam karesel hatanın %57,04'ü; son ay yönteminden daha düşük mutlak hata 65/108 ay. Bu aylar skordan çıkarılmadı, yeni model seçilmedi ve final holdout skorlanmadı.
+- plot_diagnostics.py yayımlanan CSV'lerden iki SVG/PNG ve tanısal JSON üretir; input/kod kimliği ve Matplotlib 3.10.7 manifestte. İki PNG yerelde görsel incelendi; SVG yayımlanır. Matplotlib yalnız geliştirme/grafik bağımlılığıdır.
+- CONTRIBUTIONS.md proje sahibinin yönlendirmesini ve AI destekli uygulama/analiz katkısını ayrı ve somut kaydeder. Kullanıcıya henüz belirtmediği teknik kararlar veya öğrenmeler atfedilmedi.
+- AGENTS.md güncel GitHub ağacından çıkarıldı, yerel dosya korunup .gitignore'a eklendi. Araştırma becerisi .agents/skills altında korunur; geçmiş commit'ler yeniden yazılmaz.
+- Sonraki kabul: proje sahibinin büyük hata maliyetine göre öncelik vereceği ekonomik girdi ve rapor kullanım kararını kaydetmesi; veri erişilebilirliği incelemesi henüz yapılmadı.

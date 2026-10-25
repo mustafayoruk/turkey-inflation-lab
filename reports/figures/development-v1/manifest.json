@@ -1,0 +1,9 @@
+{
+  "input_sha256": {
+    "predictions.csv": "0b4716975dfcad5fd77a19d6d52aa48f1d0dcfae0bba81e7dfec9197bb1f24ad",
+    "metrics.csv": "07644ff50d12f09c3df6b0a80a6bc64609ad918f3dda3d2a4ce9910523d1121c"
+  },
+  "code_sha256": "8d770ccc84cb4c6994f47f4dd724f130b01322e9dffa9293e1d25a6c9f54d336",
+  "matplotlib_version": "3.10.7",
+  "holdout_scored": false
+}

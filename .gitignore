@@ -8,3 +8,9 @@ data/raw/
 data/processed/
 work/
 reports/runs/
+
+# Local working instructions; keep the research skill available to contributors.
+/AGENTS.md
+
+# Rendered local previews; published figures use SVG.
+/reports/figures/**/*.png

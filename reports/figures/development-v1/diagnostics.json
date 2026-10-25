@@ -1,0 +1,73 @@
+{
+  "n": 108,
+  "largest_errors": [
+    {
+      "target_period": "2021-12",
+      "origin_period": "2021-11",
+      "method": "ridge",
+      "actual": 13.58,
+      "prediction": 1.010126524390083,
+      "error": -12.569873475609917
+    },
+    {
+      "target_period": "2022-01",
+      "origin_period": "2021-12",
+      "method": "ridge",
+      "actual": 11.1,
+      "prediction": 2.037633682350147,
+      "error": -9.062366317649852
+    },
+    {
+      "target_period": "2023-07",
+      "origin_period": "2023-06",
+      "method": "ridge",
+      "actual": 9.49,
+      "prediction": 1.8691841412495216,
+      "error": -7.620815858750479
+    },
+    {
+      "target_period": "2022-12",
+      "origin_period": "2022-11",
+      "method": "ridge",
+      "actual": 1.18,
+      "prediction": 7.460066822583857,
+      "error": 6.280066822583858
+    },
+    {
+      "target_period": "2018-09",
+      "origin_period": "2018-08",
+      "method": "ridge",
+      "actual": 6.3,
+      "prediction": 0.7194413963609605,
+      "error": -5.580558603639039
+    },
+    {
+      "target_period": "2023-01",
+      "origin_period": "2022-12",
+      "method": "ridge",
+      "actual": 6.65,
+      "prediction": 1.247607633559116,
+      "error": -5.402392366440885
+    },
+    {
+      "target_period": "2022-05",
+      "origin_period": "2022-04",
+      "method": "ridge",
+      "actual": 2.98,
+      "prediction": 7.078563262178047,
+      "error": 4.098563262178047
+    },
+    {
+      "target_period": "2023-08",
+      "origin_period": "2023-07",
+      "method": "ridge",
+      "actual": 9.09,
+      "prediction": 5.095669490669747,
+      "error": -3.9943305093302532
+    }
+  ],
+  "top3_squared_error_share": 0.5704328641130354,
+  "ridge_lower_absolute_error_months": 65,
+  "analysis_status": "post-hoc descriptive development diagnostics; no new model selection",
+  "holdout_scored": false
+}
